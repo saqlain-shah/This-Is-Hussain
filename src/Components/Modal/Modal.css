@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "Urdu-Font";
+  src: url("../font/JameelNastaleeq.ttf") format("opentype");
+}
+@font-face {
+  font-family: "THICCCBOI";
+  src: url("../font/THICCCBOI-Regular.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "UrduFont";
+  src: url("../font/JameelNastaleeq.ttf") format("opentype");
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 10px;
+  max-width: 1080px;
+}
+
+.container:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.container--mid {
+  max-width: 900px;
+}
+
+.button__text {
+  vertical-align: middle;
+  font-size: 14px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.english-text {
+  font-family: "THICCCBOI", cursive;
+
+  /* Add any other styling specific to Urdu text paragraphs */
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+  /* Add RTL styles for Urdu text */
+  text-align: left;
+}
+
+.english-text__heading {
+  font-family: "THICCCBOI", cursive;
+
+  /* Add any other styling specific to Urdu text paragraphs */
+  font-size: 30px;
+  color: #333;
+  margin: 0;
+  /* Add RTL styles for Urdu text */
+  text-align: left;
+}
+
+.urdu-text {
+  /* Add any other styling specific to Urdu text paragraphs */
+  font-family: "UrduFont", cursive;
+  font-size: 40px;
+  color: #333;
+  margin: 0;
+  /* Add RTL styles for Urdu text */
+  direction: rtl;
+  text-align: right;
+}
+
+.urdu-text h1 {
+  /* Add any other styling specific to Urdu text paragraphs */
+  font-family: "Urdu-Font", cursive;
+  font-size: 40px;
+  color: #333;
+  margin: 0;
+  /* Add RTL styles for Urdu text */
+  direction: rtl;
+  text-align: right;
+}
+.button {
+  display: inline-block;
+  position: relative;
+  padding: 5px 5px;
+  min-width: 80px;
+  min-height: 25px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #4d61fc;
+  color: #fff;
+
+  transition: border 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+ background-color: #d4d0d0;
+ color: #4d61fc;
+ 
+}
+
+.button:active {
+  transform: scale(0.98);
+}
