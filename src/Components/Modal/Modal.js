@@ -1,5 +1,7 @@
 import React from "react";
 import "./Modal.css";
+import { Link } from "react-router-dom";
+
 const Modal = () => {
   const customStyle = {
     zIndex: 11,
@@ -67,7 +69,7 @@ const Modal = () => {
                           class="pill-link   pill-link--blue"
                           href="#"
                           target="_self"
-						  style={{marginTop:"15px"}}
+                          style={{ marginTop: "15px" }}
                         >
                           <span class="pill-link__pill">New</span>
                           <span class="pill-link__text">
@@ -99,13 +101,16 @@ const Modal = () => {
                         </a>
                       </li>
                       <li class="button buttons-set__item">
-                        <a
-                          class="button button--accent-outline "
-                          href="/learn-more-in-english"
-                          target="_self"
-                        >
-                          <span class="button__text">English</span>
-                        </a>
+                        <div>
+                          {/* Your other content */}
+                          <Link
+                            className="button button--accent-outline"
+                            to="/learn-more-in-english"
+                          >
+                            <span className="button__text">English</span>
+                          </Link>
+                          {/* Other buttons and content */}
+                        </div>
                       </li>
                     </ul>
                   </div>

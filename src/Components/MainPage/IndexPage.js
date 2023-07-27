@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./IndexPage.css";
 import Logo from "../images/rinor.png";
 import JsonData from "./NewJson.json";
+import { Link } from "react-router-dom";
+
 
 const MainPage = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("english");
@@ -46,14 +48,13 @@ const MainPage = () => {
               </a>
             ))}
             <div className="divider left"></div>
-            <a className="title" href="#">
-              More Info
-            </a>
+            <Link className="title" to="/learn-more-in-urdu"> Switch to Urdu!</Link>
+    
             <div className="space double"></div>
           </div>
 
           <div className="right-col">
-            <h1>  Hussain, the Martyr of Freedom and Humanity</h1>
+            <h1> Hussain, the Martyr of Freedom and Humanity</h1>
             {JsonData[selectedLanguage].map((blog) => (
               <div key={blog.id}>
                 <h2 id={blog.id}>{blog.title}</h2>
