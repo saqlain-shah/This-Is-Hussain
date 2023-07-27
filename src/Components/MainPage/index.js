@@ -1,5 +1,5 @@
 import React from "react";
-import "./Modal.css";
+import "./index.css";
 import { Link } from "react-router-dom";
 
 const Modal = () => {
@@ -24,6 +24,7 @@ const Modal = () => {
                     <img
                       src="https://dvzvtsvyecfyp.cloudfront.net/static/img/twemoji/1f64c.svg"
                       class=""
+                      alt="Hand Stand Up Icon"
                     />
                   </div>
 
@@ -73,7 +74,7 @@ const Modal = () => {
                         >
                           <span class="pill-link__pill">New</span>
                           <span class="pill-link__text">
-                            Select Language for Readmore
+                            Select Language to Readmore
                           </span>
                           <span class="pill-link__icon">
                             <span class="icon">

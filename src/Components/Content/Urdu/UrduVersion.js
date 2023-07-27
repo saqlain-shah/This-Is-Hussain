@@ -1,36 +1,18 @@
 import React, { useState } from "react";
-import "./IndexPage.css";
-import Logo from "../images/rinor.png";
-import JsonData from "./NewJson.json";
 import { Link } from "react-router-dom";
+import Logo from "../../images/rinor.png";
+import JsonData from "../NewJson.json";
+import "./UrduVersion.css";
 
-
-const MainPage = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState("english");
+const UrduVersion = () => {
+  const [selectedLanguage, setSelectedLanguage] = useState("urdu");
 
   return (
     <div>
       <div className="navbar clear nav-top">
         <div className="row content">
           <img className="logo" src={Logo} alt="Logo" />
-
-          <a
-            className="right"
-            style={{ textDecoration: "none" }}
-            href="tel:05815457424"
-          >
-            <i className="fas fa-phone"></i>&nbsp; (058154) 57424
-          </a>
-          <a
-            className="right"
-            style={{ textDecoration: "none" }}
-            href="tel:03400596665"
-          >
-            <i className="fas fa-phone"></i>&nbsp; 0340-0596665
-          </a>
-          <a className="right" href="mailto:info@rinor.com" target="_blank">
-            <i className="fas fa-paper-plane"></i>&nbsp; info@rinor.com
-          </a>
+          {/* Your other navbar links and content here */}
         </div>
       </div>
 
@@ -38,23 +20,20 @@ const MainPage = () => {
         <div className="row wrapper">
           <div className="sidepanel">
             {JsonData[selectedLanguage].map((blog) => (
-              <a
-                key={blog.id}
-                className="title"
-                href={`#${blog.id}`}
-                onClick={() => setSelectedLanguage(selectedLanguage)}
-              >
+              <a key={blog.id} className="title" href={`#${blog.id}`}>
                 {blog.title}
               </a>
             ))}
             <div className="divider left"></div>
-            <Link className="title" to="/learn-more-in-urdu"> Switch to Urdu!</Link>
-    
+            <Link className="title" to="/learn-more-in-english">
+              Switch to English!
+            </Link>
+
             <div className="space double"></div>
           </div>
 
           <div className="right-col">
-            <h1> Hussain, the Martyr of Freedom and Humanity</h1>
+            <h1> حسین شہیدِ حریت و آزادی بشر</h1>
             {JsonData[selectedLanguage].map((blog) => (
               <div key={blog.id}>
                 <h2 id={blog.id}>{blog.title}</h2>
@@ -73,4 +52,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default UrduVersion;

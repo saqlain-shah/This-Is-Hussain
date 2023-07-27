@@ -1,14 +1,15 @@
 @font-face {
-  font-family: "Thick-Medium";
-  src: url("../font/THICCCBOI-Medium.ttf") format("opentype");
+  font-family: "Jameel-Nastaleeq";
+  src: url("../../font/JameelNastaleeq.ttf") format("opentype");
 }
 @font-face {
-  font-family: "Thick-Bold";
-  src: url("../font/THICCCBOI-Bold.ttf") format("opentype");
+  font-family: "Pak-Nastaleeq";
+  src: url("../../font/PakNastaleeq.otf") format("opentype");
 }
+
 @font-face {
-  font-family: "Thick-Regular";
-  src: url("../font/THICCCBOI-Regular.ttf") format("opentype");
+  font-family: "Aslam";
+  src: url("../../font/Aslam.ttf") format("opentype");
 }
 
 html {
@@ -16,34 +17,39 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Jameel-Nastaleeq", "Aslam";
   letter-spacing: 0.2px;
   color: #333;
   margin: 0;
 }
 
 h1 {
-  font-family: "Noto Serif", serif;
+  font-family: "Aslam", "Jameel-Nastaleeq";
   font-size: 39px;
   line-height: 42px;
   margin-bottom: 50px;
+  direction: rtl;
+  text-align: right;
 }
 
 h2 {
-  font-family: "Noto Serif", serif;
+  font-family: "Jameel-Nastaleeq", "Pak-Nastaleeq";
   font-size: 28px;
   line-height: 30px;
-  text-align: center;
   color: #333;
   margin-block-start: 40px;
   margin-block-end: 30px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+  direction: rtl;
+  text-align: right;
 }
 
 p {
   font-size: 20px;
   line-height: 26px;
+  direction: rtl;
+  text-align: right;
 }
 
 a {
@@ -153,7 +159,7 @@ a:hover {
 }
 
 .sidepanel a.title {
-  font-family: "Thick-Regular", serif;
+  font-family: "Jameel-Nastaleeq", "Aslam";
   font-size: 18px;
   font-weight: 600;
   text-align: left;
@@ -164,7 +170,7 @@ a:hover {
 }
 
 .sidepanel a.section {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Jameel-Nastaleeq", "Aslam";
   font-size: 15px;
   text-align: left;
   line-height: 30px;
@@ -174,7 +180,7 @@ a:hover {
 }
 
 .sidepanel a.sub-section {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Jameel-Nastaleeq", "Aslam";
   font-size: 15px;
   text-align: left;
   line-height: 25px;
@@ -209,32 +215,33 @@ a:hover {
 }
 
 .right-col h1 {
-  font-family: "Thick-Bold", monospace;
+  font-family: "Jameel-Nastaleeq", "Aslam";
   font-size: 50px;
 }
 
 .right-col h2 {
-  font-family: "Thick-Bold", monospace;
+  font-family: "Jameel-Nastaleeq", "Aslam";
   color: mediumblue;
   font-size: 21px;
   line-height: 24px;
   margin-bottom: 30px;
-  text-align: left;
+  text-align: right;
   margin-block-start: 20px;
   margin-block-end: 10px;
 }
 
 .right-col p {
-  font-family: "Thick-Medium", monospace;
+  font-family: "Jameel-Nastaleeq", "Aslam";
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 36px;
 }
 .right-col ul {
-  font-family: "Thick-Medium", monospace;
+  font-family: "Jameel-Nastaleeq", "Aslam";
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 36px;
+  text-align: right;
 }
 
 .right-col a {
@@ -358,7 +365,8 @@ a:hover {
     text-align: center;
     height: auto;
     position: sticky;
-  }  .navbar a {
+  }
+  .navbar a {
     display: none; /* Hide the <a> tags */
     text-decoration: none;
     background-color: #ffffff;
@@ -528,8 +536,6 @@ a:hover {
   font-size: 16px;
   float: right;
 }
-
-
 
 /* Add your other existing styles here */
 /* Your other styles for navbar, footer, etc. */
