@@ -27,12 +27,23 @@ const Modal = () => {
                       alt="Hand Stand Up Icon"
                     />
                   </div>
+                  <div className="container-left_side">
 
+                  </div>
+                  <div className="container-right_side">
+
+                  </div>
+                  <div className="container-right_side">
+
+                  </div>
+                  <div className="container-left_side">
+                    
+                  </div>
                   <h1 className="english-text__heading">
                     Hussain, the Martyr of Freedom and Humanity
                   </h1>
 
-                  <div class="content_box">
+                  <div class="content_box ">
                     <div className="urdu-text">
                       <h1> ھیھات منا الذلۃ (حسین ابن علی علیہ السلام)</h1>
                       <p>
@@ -59,9 +70,9 @@ const Modal = () => {
                     </div>
                   </div>
 
-                  <div class="buttons-set">
-                    <ul class="buttons-set__list">
-                      <li class="buttons-set__item">
+                  <div className="buttons-set ">
+                    <ul className="buttons-set__list">
+                      <li className="buttons-set__item">
                         <a
                           data-stripe-product-id=""
                           data-stripe-mode="payment"
@@ -72,12 +83,12 @@ const Modal = () => {
                           target="_self"
                           style={{ marginTop: "15px" }}
                         >
-                          <span class="pill-link__pill">New</span>
-                          <span class="pill-link__text">
+                          <span className="pill-link__pill">New</span>
+                          <span className="pill-link__text">
                             Select Language to Readmore
                           </span>
-                          <span class="pill-link__icon">
-                            <span class="icon">
+                          <span className="pill-link__icon">
+                            <span className="icon">
                               <svg
                                 viewBox="0 0 13 10"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -92,16 +103,16 @@ const Modal = () => {
                           </span>
                         </a>
                       </li>
-                      <li class="button buttons-set__item">
+                      <li className="button buttons-set__item">
                         <a
-                          class="button button--accent-outline "
+                          className="button button--accent-outline "
                           href="/learn-more-in-urdu"
                           target="_self"
                         >
-                          <span class="button__text">Urdu</span>
+                          <span className="button__text">Urdu</span>
                         </a>
                       </li>
-                      <li class="button buttons-set__item">
+                      <li className="button buttons-set__item">
                         <div>
                           {/* Your other content */}
                           <Link

@@ -216,7 +216,7 @@ a:hover {
   font-size: 50px;
 }
 
-.right-col h2 {
+.english .right-col h2 {
   font-family: "Thick-Bold", monospace;
   color: mediumblue;
   font-size: 21px;
@@ -227,15 +227,17 @@ a:hover {
   margin-block-end: 10px;
 }
 
-.right-col p {
+.english .right-col p {
   font-family: "Thick-Medium", monospace;
   font-size: 18px;
   line-height: 30px;
+  text-align: left;
   margin-bottom: 36px;
 }
-.right-col ul {
+.english  .right-col ul {
   font-family: "Thick-Medium", monospace;
   font-size: 18px;
+  text-align: left;
   line-height: 30px;
   margin-bottom: 36px;
 }
@@ -316,8 +318,7 @@ a:hover {
   padding-bottom: 8px;
 }
 
-/* Break Points */
-/* Extra small-small devices (phones, 420px and down) */
+
 @media only screen and (max-width: 420px) {
   .logo {
     width: 80px;
@@ -327,7 +328,7 @@ a:hover {
     height: auto;
   }
   .navbar a {
-    display: none; /* Hide the <a> tags */
+    display: none; 
     text-decoration: none;
     background-color: #ffffff;
     padding: 10px;
@@ -347,7 +348,7 @@ a:hover {
   }
 }
 
-/* Extra small devices (phones, 650px and down) */
+
 @media only screen and (max-width: 650px) {
   .logo {
     width: 100px;
@@ -362,7 +363,7 @@ a:hover {
     height: auto;
     position: sticky;
   }  .navbar a {
-    display: none; /* Hide the <a> tags */
+    display: none; 
     text-decoration: none;
     background-color: #ffffff;
     padding: 10px;
@@ -408,7 +409,7 @@ a:hover {
   }
 }
 
-/* Small devices (portrait tablets and large phones, 650px and up) */
+
 @media only screen and (min-width: 450px) {
   .logo {
     margin: -10px 0px;
@@ -423,7 +424,7 @@ a:hover {
   }
 
   .navbar a {
-    display: none; /* Hide the <a> tags */
+    display: none; 
     text-decoration: none;
     background-color: #ffffff;
     padding: 10px;
@@ -432,7 +433,7 @@ a:hover {
   }
 }
 
-/* Small devices (portrait tablets and large phones, 650px and up) */
+
 @media only screen and (min-width: 650px) {
   .logo {
     margin: -10px 0px;
@@ -460,12 +461,12 @@ a:hover {
   }
 }
 
-/* Default styles for .logo */
+
 .logo {
-  /* Your existing styles for .logo */
+  
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+
 @media only screen and (min-width: 768px) {
   .logo {
     margin: -10px 0px;
@@ -493,7 +494,7 @@ a:hover {
   }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
+
 @media only screen and (min-width: 992px) {
   .navbar {
     background-color: #ffffff;
@@ -512,7 +513,7 @@ a:hover {
   }
 }
 
-/* Additional styles for .navbar */
+
 .navbar {
   height: auto;
   position: sticky;
@@ -534,5 +535,3 @@ a:hover {
 
 
 
-/* Add your other existing styles here */
-/* Your other styles for navbar, footer, etc. */

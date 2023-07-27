@@ -22,7 +22,6 @@ body {
   color: #333;
   margin: 0;
   text-align: right;
-
 }
 h1 {
   font-family: "Aslam", "Jameel-Nastaleeq";
@@ -33,6 +32,15 @@ h1 {
   text-align: right;
 }
 
+h1:hover {
+  text-decoration: none;
+  font-size: xx-large;
+  padding: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: rgb(173, 31, 15);
+  text-align: center;
+}
 h2 {
   font-family: "Jameel-Nastaleeq", "Pak-Nastaleeq";
   font-size: 28px;
@@ -45,12 +53,26 @@ h2 {
   direction: rtl;
   text-align: right;
 }
-
+h2:hover {
+  text-decoration: none;
+  text-align: center;
+  font-size: larger;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #cb2626;
+}
 p {
   font-size: 20px;
   line-height: 26px;
   direction: rtl;
   text-align: right;
+}
+p:hover {
+  text-decoration: none;
+  font-size: larger;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: rgb(206, 219, 219);
 }
 
 a {
@@ -58,17 +80,20 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
-}
-/* Common styles for the logo and navbar links */
-.logo {
-  max-width: 150px; /* Adjust the max-width as per your requirement */
-  height: auto;
-  float: left;
-  margin: 15px 30px; /* Adjust the margins as needed */
+  text-decoration: none;
+  background-color: rgb(250, 211, 86);
+  border-radius: 4px;
+  cursor: pointer;
+  color: #cb2626;
 }
 
-/* Navbar styles */
+.logo {
+  max-width: 150px;
+  height: auto;
+  float: left;
+  margin: 15px 30px;
+}
+
 .navbar {
   height: auto;
   position: sticky;
@@ -76,22 +101,18 @@ a:hover {
   left: 0;
   right: 0;
   z-index: 9999;
-  margin-bottom: 80px; /* Adjust the value as needed to create space for the footer */
+  margin-bottom: 80px;
 }
 
 .navbar a {
   color: #000000;
   text-decoration: none;
-  margin-right: 20px; /* Adjust the spacing between navbar links */
+  margin-right: 20px;
   font-size: 16px;
-  float: right; /* Align the <a> elements to the left side */
+  float: right;
 }
 
-/* Rest of the styles */
-
-/* Add media queries for responsive design */
 @media screen and (max-width: 768px) {
-  /* For screens smaller than 768px, make the navbar responsive */
   .navbar {
     height: auto;
     position: fixed;
@@ -115,7 +136,6 @@ a:hover {
     margin: 15px auto;
   }
 
-  /* Hide the top-info and divider elements on smaller screens */
   .top-info,
   .divider {
     display: none;
@@ -155,8 +175,8 @@ a:hover {
 
   overflow-x: hidden;
   position: fixed;
-  height: calc(100% - 120px); /* Adjust the height based on your needs */
-  bottom: 0; /* Position the sidepanel at the bottom */
+  height: calc(100% - 120px);
+  bottom: 0;
 }
 
 .sidepanel a.title {
@@ -210,7 +230,6 @@ a:hover {
   margin-bottom: 36px;
 }
 
-
 .main-col p {
   font-size: 15px;
   line-height: 24px;
@@ -252,7 +271,14 @@ a:hover {
   margin-bottom: 36px;
   text-align: right;
 }
-
+ul:hover {
+  text-decoration: none;
+  font-size: xx-large;
+  padding: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: rgb(206, 219, 219);
+}
 .right-col a {
   color: #0098f1;
   text-decoration: underline;
@@ -329,8 +355,6 @@ a:hover {
   padding-bottom: 8px;
 }
 
-/* Break Points */
-/* Extra small-small devices (phones, 420px and down) */
 @media only screen and (max-width: 420px) {
   .logo {
     width: 80px;
@@ -340,7 +364,7 @@ a:hover {
     height: auto;
   }
   .navbar a {
-    display: none; /* Hide the <a> tags */
+    display: none;
     text-decoration: none;
     background-color: #ffffff;
     padding: 10px;
@@ -360,7 +384,6 @@ a:hover {
   }
 }
 
-/* Extra small devices (phones, 650px and down) */
 @media only screen and (max-width: 650px) {
   .logo {
     width: 100px;
@@ -422,7 +445,6 @@ a:hover {
   }
 }
 
-/* Small devices (portrait tablets and large phones, 650px and up) */
 @media only screen and (min-width: 450px) {
   .logo {
     margin: -10px 0px;
@@ -437,7 +459,7 @@ a:hover {
   }
 
   .navbar a {
-    display: none; /* Hide the <a> tags */
+    display: none;
     text-decoration: none;
     background-color: #ffffff;
     padding: 10px;
@@ -446,7 +468,6 @@ a:hover {
   }
 }
 
-/* Small devices (portrait tablets and large phones, 650px and up) */
 @media only screen and (min-width: 650px) {
   .logo {
     margin: -10px 0px;
@@ -474,12 +495,9 @@ a:hover {
   }
 }
 
-/* Default styles for .logo */
 .logo {
-  /* Your existing styles for .logo */
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .logo {
     margin: -10px 0px;
@@ -507,7 +525,6 @@ a:hover {
   }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .navbar {
     background-color: #ffffff;
@@ -526,7 +543,6 @@ a:hover {
   }
 }
 
-/* Additional styles for .navbar */
 .navbar {
   height: auto;
   position: sticky;
@@ -545,6 +561,3 @@ a:hover {
   font-size: 16px;
   float: right;
 }
-
-/* Add your other existing styles here */
-/* Your other styles for navbar, footer, etc. */

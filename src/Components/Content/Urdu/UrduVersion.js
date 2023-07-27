@@ -1,12 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../images/rinor.png";
+import Logo from "../../images/logo.jpg";
 import JsonData from "../NewJson.json";
 import "./UrduVersion.css";
 
 const UrduVersion = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("urdu");
+  const [isScrolling, setIsScrolling] = useState(false);
+  const scrollSpeed = 20; // Adjust the scroll speed as needed
 
+  const handleMouseMove = (event) => {
+    if (!isScrolling) {
+      setIsScrolling(true);
+      requestAnimationFrame(() => {
+        scrollContent(event.movementY);
+        setIsScrolling(false);
+      });
+    }
+  };
+
+  const scrollContent = (movementY) => {
+    window.scrollBy(0, movementY * scrollSpeed);
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [isScrolling]);
+
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "./EnglishVersion.css";
+    document.head.appendChild(link);
+
+    return () => {
+      document.head.removeChild(link); // Clean up when the component unmounts
+    };
+  }, []);
   return (
     <div className="urdu">
       <div className="navbar clear nav-top">
@@ -32,7 +66,7 @@ const UrduVersion = () => {
             <div className="space double"></div>
           </div>
 
-          <div className="right-col">
+          <div className="right-col urdu-left-side">
             <h1> حسین شہیدِ حریت و آزادی بشر</h1>
             {JsonData[selectedLanguage].map((blog) => (
               <div key={blog.id}>

@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Urdu-Font";
-  src: url("../font/JameelNastaleeq.ttf") format("opentype");
+  font-family: "Aslam";
+  src: url("../font/Aslam.ttf") format("opentype");
 }
 @font-face {
   font-family: "THICCCBOI";
@@ -8,8 +8,18 @@
 }
 
 @font-face {
-  font-family: "UrduFont";
+  font-family: "Jameel";
   src: url("../font/JameelNastaleeq.ttf") format("opentype");
+}
+
+.container-left_side {
+}
+.container-left_side:hover {
+}
+
+.container-right_side {
+}
+.container-right_side:hover {
 }
 
 .container {
@@ -40,43 +50,48 @@
 .english-text {
   font-family: "THICCCBOI", cursive;
 
-  /* Add any other styling specific to Urdu text paragraphs */
   font-size: 20px;
   color: #333;
   margin: 0;
-  /* Add RTL styles for Urdu text */
   text-align: left;
 }
 
 .english-text__heading {
   font-family: "THICCCBOI", cursive;
-
-  /* Add any other styling specific to Urdu text paragraphs */
   font-size: 30px;
   color: #333;
   margin: 0;
-  /* Add RTL styles for Urdu text */
+  text-align: left;
+}
+.english-text__heading :hover {
+  font-family: "THICCCBOI", cursive;
+  font-size: 30px;
+  color: #8d0b0b;
+  margin: 0;
   text-align: left;
 }
 
-.urdu-text {
-  /* Add any other styling specific to Urdu text paragraphs */
-  font-family: "UrduFont", cursive;
+.urdu-text left-side {
+  font-family: "Aslam", cursive;
   font-size: 40px;
   color: #333;
   margin: 0;
-  /* Add RTL styles for Urdu text */
   direction: rtl;
   text-align: right;
 }
 
-.urdu-text h1 {
-  /* Add any other styling specific to Urdu text paragraphs */
+.urdu-text left-side h1 {
   font-family: "Urdu-Font", cursive;
   font-size: 40px;
   color: #333;
   margin: 0;
-  /* Add RTL styles for Urdu text */
+  direction: rtl;
+  text-align: right;
+}
+.urdu-text left-side p {
+  font-family: "Jameel", cursive;
+  color: #333;
+  margin: 0;
   direction: rtl;
   text-align: right;
 }
@@ -101,9 +116,8 @@
 }
 
 .button:hover {
- background-color: #d4d0d0;
- color: #4d61fc;
- 
+  background-color: #d4d0d0;
+  color: #4d61fc;
 }
 
 .button:active {

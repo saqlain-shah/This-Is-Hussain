@@ -1,13 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./EnglishVersion.css";
-import Logo from "../../images/rinor.png";
+import Logo from "../../images/logo.jpg";
 import JsonData from "../NewJson.json";
 import { Link } from "react-router-dom";
-
 
 const EnglishVersion = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("english");
 
+  const [isScrolling, setIsScrolling] = useState(false);
+  const scrollSpeed = 20; // Adjust the scroll speed as needed
+
+  const handleMouseMove = (event) => {
+    if (!isScrolling) {
+      setIsScrolling(true);
+      requestAnimationFrame(() => {
+        scrollContent(event.movementY);
+        setIsScrolling(false);
+      });
+    }
+  };
+
+  const scrollContent = (movementY) => {
+    window.scrollBy(0, movementY * scrollSpeed);
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [isScrolling]);
+
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "./EnglishVersion.css";
+    document.head.appendChild(link);
+
+    return () => {
+      document.head.removeChild(link); // Clean up when the component unmounts
+    };
+  }, []);
   return (
     <div className="english">
       <div className="navbar clear nav-top">
