@@ -1,21 +1,12 @@
 import React from "react";
 import "./Footer.css";
-import Logo from "../images/rinor.png";
-const FooterComponent = () => {
+
+const Footer = () => {
   return (
-    <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <p class="copyright-text">Developed by:{" "}   
-         <a style={{color:" #bbb"}} href="#">Saqlain Shah</a>.
-            </p>
-          </div>
-          </div>
-        </div>
-     
-</footer>
+    <footer>
+      <span>a project of Rinor.pk</span>
+    </footer>
   );
 };
 
-export default FooterComponent;
+export default Footer;

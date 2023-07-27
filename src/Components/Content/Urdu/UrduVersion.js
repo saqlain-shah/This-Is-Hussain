@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../images/logo.jpg";
+
 import JsonData from "../NewJson.json";
 import "./UrduVersion.css";
-
+import Footer from "../../Footer/Footer";
+import Header from "../../Header/Header";
 const UrduVersion = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("urdu");
   const [isScrolling, setIsScrolling] = useState(false);
@@ -43,27 +44,33 @@ const UrduVersion = () => {
   }, []);
   return (
     <div className="urdu">
-      <div className="navbar clear nav-top">
+      <Header />
+      {/*
+       <div className="navbar clear nav-top">
         <div className="row content">
           <img className="logo" src={Logo} alt="Logo" />
-          {/* Your other navbar links and content here */}
+         
         </div>
       </div>
+      
+      */}
 
       <div className="container clear" style={{ paddingBottom: "200px" }}>
         <div className="row wrapper">
           <div className="sidepanel">
-            {JsonData[selectedLanguage].map((blog) => (
-              <a key={blog.id} className="title" href={`#${blog.id}`}>
-                {blog.title}
-              </a>
-            ))}
-            <div className="divider left"></div>
-            <Link className="title" to="/learn-more-in-english">
-              Switch to English!
-            </Link>
+            <div className="inner-sidepanel">
+              {JsonData[selectedLanguage].map((blog) => (
+                <a key={blog.id} className="title" href={`#${blog.id}`}>
+                  {blog.title}
+                </a>
+              ))}
+              <div className="divider left"></div>
+              <Link className="title" to="/learn-more-in-english">
+                Switch to English!
+              </Link>
 
-            <div className="space double"></div>
+              <div className="space double"></div>
+            </div>
           </div>
 
           <div className="right-col urdu-left-side">
@@ -82,6 +89,8 @@ const UrduVersion = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

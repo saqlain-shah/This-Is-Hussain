@@ -16,16 +16,15 @@ html {
 }
 
 body {
-  font-family: "Thick-Bold","Thick-Medium", "Thick-Regular";
+  font-family: "Thick-Bold", "Thick-Medium", "Thick-Regular";
   letter-spacing: 0.2px;
   color: #333;
   margin: 0;
-    text-align: left;
-
+  text-align: left;
 }
 
 h1 {
-  font-family: "Thick-Bold","Thick-Medium", "Thick-Regular";
+  font-family: "Thick-Bold", "Thick-Medium", "Thick-Regular";
   font-size: 39px;
   line-height: 42px;
   margin-bottom: 50px;
@@ -72,7 +71,9 @@ a:hover {
   left: 0;
   right: 0;
   z-index: 9999;
-  margin-bottom: 80px; /* Adjust the value as needed to create space for the footer */
+  margin-bottom: 80px;
+  overflow-wrap: normal;
+  overflow: hidden;
 }
 
 .navbar a {
@@ -151,11 +152,11 @@ a:hover {
 
   overflow-x: hidden;
   position: fixed;
-  height: calc(100% - 120px); /* Adjust the height based on your needs */
-  bottom: 0; /* Position the sidepanel at the bottom */
+  height: calc(100% - 120px); 
+  bottom: 0; 
 }
 
-.sidepanel a.title {
+.english .sidepanel a.title {
   font-family: "Thick-Regular", serif;
   font-size: 18px;
   font-weight: 600;
@@ -164,6 +165,8 @@ a:hover {
   color: #333;
   display: block;
   padding-bottom: 12px;
+ 
+  overflow: hidden;
 }
 
 .sidepanel a.section {
@@ -234,7 +237,7 @@ a:hover {
   text-align: left;
   margin-bottom: 36px;
 }
-.english  .right-col ul {
+.english .right-col ul {
   font-family: "Thick-Medium", monospace;
   font-size: 18px;
   text-align: left;
@@ -318,7 +321,6 @@ a:hover {
   padding-bottom: 8px;
 }
 
-
 @media only screen and (max-width: 420px) {
   .logo {
     width: 80px;
@@ -328,7 +330,7 @@ a:hover {
     height: auto;
   }
   .navbar a {
-    display: none; 
+    display: none;
     text-decoration: none;
     background-color: #ffffff;
     padding: 10px;
@@ -348,7 +350,6 @@ a:hover {
   }
 }
 
-
 @media only screen and (max-width: 650px) {
   .logo {
     width: 100px;
@@ -362,8 +363,9 @@ a:hover {
     text-align: center;
     height: auto;
     position: sticky;
-  }  .navbar a {
-    display: none; 
+  }
+  .navbar a {
+    display: none;
     text-decoration: none;
     background-color: #ffffff;
     padding: 10px;
@@ -409,7 +411,6 @@ a:hover {
   }
 }
 
-
 @media only screen and (min-width: 450px) {
   .logo {
     margin: -10px 0px;
@@ -424,7 +425,7 @@ a:hover {
   }
 
   .navbar a {
-    display: none; 
+    display: none;
     text-decoration: none;
     background-color: #ffffff;
     padding: 10px;
@@ -432,7 +433,6 @@ a:hover {
     color: #000000;
   }
 }
-
 
 @media only screen and (min-width: 650px) {
   .logo {
@@ -461,11 +461,8 @@ a:hover {
   }
 }
 
-
 .logo {
-  
 }
-
 
 @media only screen and (min-width: 768px) {
   .logo {
@@ -494,7 +491,6 @@ a:hover {
   }
 }
 
-
 @media only screen and (min-width: 992px) {
   .navbar {
     background-color: #ffffff;
@@ -513,7 +509,10 @@ a:hover {
   }
 }
 
-
+.inner-sidepanel {
+  position: sticky;
+  top: 140px;
+}
 .navbar {
   height: auto;
   position: sticky;
@@ -532,6 +531,3 @@ a:hover {
   font-size: 16px;
   float: right;
 }
-
-
-

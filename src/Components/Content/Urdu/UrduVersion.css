@@ -23,7 +23,46 @@ body {
   margin: 0;
   text-align: right;
 }
+
+.navbar.clear.nav-top {
+  background-color: #d32f30;
+  margin-bottom: 0;
+  height: 129px;
+}
+
+.urdu .row.wrapper {
+  flex-wrap: wrap;
+}
+
+.urdu .sidepanel {
+  order: 2;
+  position: relative;
+  width: 22%;
+  max-width: 200px;
+  text-align: right;
+  height: auto;
+  overflow: unset;
+}
+
+.urdu .right-col.urdu-left-side {
+  width: 79%;
+  order: 1;
+  margin-left: 0;
+  padding-right: 20px;
+}
+
+.urdu .sidepanel a.title {
+  text-align: revert;
+  padding-bottom: 14px;
+}
+
+.inner-sidepanel {
+  position: sticky;
+  top: 140px;
+}
+
 h1 {
+  margin-top: 150px;
   font-family: "Aslam", "Jameel-Nastaleeq";
   font-size: 39px;
   line-height: 42px;
@@ -32,7 +71,8 @@ h1 {
   text-align: right;
 }
 
-h1:hover {
+.english h1:hover,
+.urdu h1:hover {
   text-decoration: none;
   font-size: xx-large;
   padding: 15px;
@@ -62,12 +102,14 @@ h2:hover {
   color: #cb2626;
 }
 p {
+  font-family: "Jameel-Nastaleeq", "Pak-Nastaleeq";
   font-size: 20px;
   line-height: 26px;
   direction: rtl;
   text-align: right;
 }
-p:hover {
+.english p:hover,
+.urdu p:hover {
   text-decoration: none;
   font-size: larger;
   border-radius: 4px;
@@ -113,6 +155,35 @@ a:hover {
 }
 
 @media screen and (max-width: 768px) {
+  .urdu .row.wrapper {
+display: inline;
+}
+
+.urdu .sidepanel {
+  order: 2;
+  position: relative;
+  text-align: right;
+  height: auto;
+  overflow: unset;
+}
+
+.urdu .right-col.urdu-left-side {
+  width: 100%;
+  order: 1;
+  margin-left: 0;
+  padding-right: 20px;
+}
+
+.urdu .sidepanel a.title {
+  text-align: revert;
+  padding-bottom: 14px;
+}
+
+.inner-sidepanel {
+  position: sticky;
+  top: 140px;
+}
+
   .navbar {
     height: auto;
     position: fixed;
@@ -141,6 +212,16 @@ a:hover {
     display: none;
   }
 }
+
+
+
+
+
+
+
+
+
+
 
 .container {
   width: 100%;
@@ -258,12 +339,6 @@ a:hover {
   margin-block-end: 10px;
 }
 
-.right-col p {
-  font-family: "Jameel-Nastaleeq", "Aslam";
-  font-size: 18px;
-  line-height: 30px;
-  margin-bottom: 36px;
-}
 .right-col ul {
   font-family: "Jameel-Nastaleeq", "Aslam";
   font-size: 18px;
@@ -273,7 +348,7 @@ a:hover {
 }
 ul:hover {
   text-decoration: none;
-  font-size: xx-large;
+  font-size: x-large;
   padding: 15px;
   border-radius: 4px;
   cursor: pointer;
@@ -356,6 +431,7 @@ ul:hover {
 }
 
 @media only screen and (max-width: 420px) {
+
   .logo {
     width: 80px;
   }

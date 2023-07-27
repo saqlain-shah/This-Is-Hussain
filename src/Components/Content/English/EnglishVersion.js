@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./EnglishVersion.css";
-import Logo from "../../images/logo.jpg";
+
 import JsonData from "../NewJson.json";
 import { Link } from "react-router-dom";
+import Footer from "../../Footer/Footer";
 
 const EnglishVersion = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("english");
@@ -44,55 +45,30 @@ const EnglishVersion = () => {
   }, []);
   return (
     <div className="english">
-      <div className="navbar clear nav-top">
-        <div className="row content">
-          <img className="logo" src={Logo} alt="Logo" />
-
-          <a
-            className="right"
-            style={{ textDecoration: "none" }}
-            href="tel:05815457424"
-          >
-            <i className="fas fa-phone"></i>&nbsp; (058154) 57424
-          </a>
-          <a
-            className="right"
-            style={{ textDecoration: "none" }}
-            href="tel:03400596665"
-          >
-            <i className="fas fa-phone"></i>&nbsp; 0340-0596665
-          </a>
-          <a
-            className="right"
-            href="mailto:info@rinor.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <i className="fas fa-paper-plane"></i>&nbsp; info@rinor.com
-          </a>
-        </div>
-      </div>
+   
 
       <div className="container clear" style={{ paddingBottom: "200px" }}>
         <div className="row wrapper">
           <div className="sidepanel">
-            {JsonData[selectedLanguage].map((blog) => (
-              <a
-                key={blog.id}
-                className="title"
-                href={`#${blog.id}`}
-                onClick={() => setSelectedLanguage(selectedLanguage)}
-              >
-                {blog.title}
-              </a>
-            ))}
-            <div className="divider left"></div>
-            <Link className="title" to="/learn-more-in-urdu">
-              {" "}
-              Switch to Urdu!
-            </Link>
+            <div className="inner-sidepanel">
+              {JsonData[selectedLanguage].map((blog) => (
+                <a
+                  key={blog.id}
+                  className="title"
+                  href={`#${blog.id}`}
+                  onClick={() => setSelectedLanguage(selectedLanguage)}
+                >
+                  {blog.title}
+                </a>
+              ))}
+              <div className="divider left"></div>
+              <Link className="title" to="/learn-more-in-urdu">
+                {" "}
+                Switch to Urdu!
+              </Link>
 
-            <div className="space double"></div>
+              <div className="space double"></div>
+            </div>
           </div>
 
           <div className="right-col">
@@ -111,6 +87,7 @@ const EnglishVersion = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

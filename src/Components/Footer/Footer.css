@@ -1,77 +1,8 @@
-@font-face {
-  font-family: "Thick-Regular";
-  src: url("../font/THICCCBOI-Regular.ttf") format("opentype");
-}
+footer{
 
-.site-footer
-{
-    font-family:'Thick-Regular', Courier, monospace;
-  background-color:#e9e3e3;
-  padding:10px 0 20px;
-  font-size:12px;
-  padding-top: 20px;
-  text-align: center;
-  line-height:15px;
-  color:#000000;
-}
-
-.site-footer hr
-{
-  border-top-color:#bbb;
-  opacity:0.5
-}
-
-
-/* Footer styles */
-.footer {
-  background-color: #9f9d9d;
-  color: #000000;
-  padding: 30px 0;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.footer-logo img {
-  width: 100px; /* Adjust the logo width as needed */
-  filter: brightness(100%);
-}
-
-.footer-links a {
-  text-decoration: none;
-  color: #fff;
-  margin-right: 20px;
-}
-
-.footer-links a:last-child {
-  margin-right: 0;
-}
-
-.footer-info {
-  text-align: center;
-}
-
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-info {
-    margin-top: 10px;
-  }
+    background-color: #d32f30;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    height: 50px;
 }

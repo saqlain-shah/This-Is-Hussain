@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import { Link } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 const Modal = () => {
   const customStyle = {
@@ -27,25 +28,19 @@ const Modal = () => {
                       alt="Hand Stand Up Icon"
                     />
                   </div>
-                  <div className="container-left_side">
-
-                  </div>
-                  <div className="container-right_side">
-
-                  </div>
-                  <div className="container-right_side">
-
-                  </div>
-                  <div className="container-left_side">
-                    
-                  </div>
-                  <h1 className="english-text__heading">
-                    Hussain, the Martyr of Freedom and Humanity
-                  </h1>
+                  <div className="container-left_side"></div>
 
                   <div class="content_box ">
                     <div className="urdu-text">
-                      <h1> ھیھات منا الذلۃ (حسین ابن علی علیہ السلام)</h1>
+                      <h1
+                        style={{
+                          margin: "auto",
+                          fontSize: "xx-large",
+                        }}
+                      >
+                        {" "}
+                        ھیھات منا الذلۃ (حسین ابن علی علیہ السلام)
+                      </h1>
                       <p>
                         حسین ابن علیؑ نے دس محرم 61 ہجری کو آمریت ، جبر
                         واستبداد اور انسان کے ہاتھوں انسانوں کی غلامی کے خلاف
@@ -56,6 +51,9 @@ const Modal = () => {
                         کیلئے آمادہ کرسکیں ۔
                       </p>
                     </div>
+                    <h1 className="english-text__heading">
+                      Hussain, the Martyr of Freedom and Humanity
+                    </h1>
                     <div className="english-text">
                       <p>
                         We are far from disgrace and humiliation (Hussain Ibn
@@ -131,6 +129,8 @@ const Modal = () => {
             </div>
           </div>
         </section>
+
+        <Footer/>
       </div>
       ;
     </div>

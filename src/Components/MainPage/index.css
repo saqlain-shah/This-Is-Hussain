@@ -27,18 +27,29 @@
   margin-left: auto;
   padding: 0 10px;
   max-width: 1080px;
+
+  &:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+
+  &--mid {
+    max-width: 900px;
+  }
 }
 
-.container:after {
-  content: " ";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both;
-}
-
-.container--mid {
-  max-width: 900px;
+.english-text__heading{
+    text-align: left;
+    font-family: 'Thick-Regular';
+    font-weight: bold;
+    padding: 0px;
+    margin: auto;
+    font-size: xx-large;
+    padding-top: 20px;
+    padding-bottom: 5px;
 }
 
 .button__text {
@@ -46,55 +57,65 @@
   font-size: 14px;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
-
-.english-text {
+.english-text p {
   font-family: "THICCCBOI", cursive;
-
+  color: #333;
+  margin: 0;
+  direction: ltl;
+  text-align: left;
+}
+.english-tet {
+  font-family: "THICCCBOI", cursive;
   font-size: 20px;
   color: #333;
   margin: 0;
   text-align: left;
+
+  &__heading {
+    font-family: "THICCCBOI", cursive;
+    font-size: 30px;
+    color: #333;
+    margin: 0;
+    text-align: left;
+
+    &:hover {
+      font-family: "THICCCBOI", cursive;
+      font-size: 30px;
+      color: #8d0b0b;
+      margin: 0;
+      text-align: left;
+    }
+  }
 }
 
-.english-text__heading {
-  font-family: "THICCCBOI", cursive;
-  font-size: 30px;
-  color: #333;
-  margin: 0;
-  text-align: left;
-}
-.english-text__heading :hover {
-  font-family: "THICCCBOI", cursive;
-  font-size: 30px;
-  color: #8d0b0b;
-  margin: 0;
-  text-align: left;
+.urdu-text {
+  &.left-side {
+    font-family: "Aslam", cursive;
+    font-size: 40px;
+    color: #333;
+    margin: 0;
+    direction: rtl;
+    text-align: right;
+
+    h1 {
+      font-family: "Urdu-Font", cursive;
+      font-size: 40px;
+      color: #333;
+      margin: 0;
+      direction: rtl;
+      text-align: right;
+    }
+
+    p {
+      font-family: "Jameel", cursive;
+      color: #333;
+      margin: 0;
+      direction: rtl;
+      text-align: right;
+    }
+  }
 }
 
-.urdu-text left-side {
-  font-family: "Aslam", cursive;
-  font-size: 40px;
-  color: #333;
-  margin: 0;
-  direction: rtl;
-  text-align: right;
-}
-
-.urdu-text left-side h1 {
-  font-family: "Urdu-Font", cursive;
-  font-size: 40px;
-  color: #333;
-  margin: 0;
-  direction: rtl;
-  text-align: right;
-}
-.urdu-text left-side p {
-  font-family: "Jameel", cursive;
-  color: #333;
-  margin: 0;
-  direction: rtl;
-  text-align: right;
-}
 .button {
   display: inline-block;
   position: relative;
@@ -113,13 +134,22 @@
   color: #fff;
 
   transition: border 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: #d4d0d0;
+    color: #4d61fc;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
 }
 
-.button:hover {
-  background-color: #d4d0d0;
-  color: #4d61fc;
+ul.buttons-set__list {
+  text-align: left;
 }
 
-.button:active {
-  transform: scale(0.98);
+ul.buttons-set__list:hover {
+  background-color: transparent;
+  padding: 0;
 }
