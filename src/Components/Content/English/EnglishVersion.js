@@ -5,11 +5,11 @@ import JsonData from "../NewJson.json";
 import { Link } from "react-router-dom";
 
 
-const MainPage = () => {
+const EnglishVersion = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("english");
 
   return (
-    <div>
+    <div className="english">
       <div className="navbar clear nav-top">
         <div className="row content">
           <img className="logo" src={Logo} alt="Logo" />
@@ -28,7 +28,12 @@ const MainPage = () => {
           >
             <i className="fas fa-phone"></i>&nbsp; 0340-0596665
           </a>
-          <a className="right" href="mailto:info@rinor.com" target="_blank">
+          <a
+            className="right"
+            href="mailto:info@rinor.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fas fa-paper-plane"></i>&nbsp; info@rinor.com
           </a>
         </div>
@@ -48,8 +53,11 @@ const MainPage = () => {
               </a>
             ))}
             <div className="divider left"></div>
-            <Link className="title" to="/learn-more-in-urdu"> Switch to Urdu!</Link>
-    
+            <Link className="title" to="/learn-more-in-urdu">
+              {" "}
+              Switch to Urdu!
+            </Link>
+
             <div className="space double"></div>
           </div>
 
@@ -73,4 +81,4 @@ const MainPage = () => {
   );
 };
 
-export default MainPage;
+export default EnglishVersion;

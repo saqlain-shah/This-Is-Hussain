@@ -8,7 +8,7 @@ const UrduVersion = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("urdu");
 
   return (
-    <div>
+    <div className="urdu">
       <div className="navbar clear nav-top">
         <div className="row content">
           <img className="logo" src={Logo} alt="Logo" />

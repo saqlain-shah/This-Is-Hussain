@@ -16,21 +16,23 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Thick-Bold","Thick-Medium", "Thick-Regular";
   letter-spacing: 0.2px;
   color: #333;
   margin: 0;
+    text-align: left;
+
 }
 
 h1 {
-  font-family: "Noto Serif", serif;
+  font-family: "Thick-Bold","Thick-Medium", "Thick-Regular";
   font-size: 39px;
   line-height: 42px;
   margin-bottom: 50px;
 }
 
 h2 {
-  font-family: "Noto Serif", serif;
+  font-family: "Thick-Medium", "Thick-Regular";
   font-size: 28px;
   line-height: 30px;
   text-align: center;
@@ -42,6 +44,7 @@ h2 {
 }
 
 p {
+  font-family: "Thick-Regular";
   font-size: 20px;
   line-height: 26px;
 }
