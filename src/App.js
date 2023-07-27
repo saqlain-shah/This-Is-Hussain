@@ -1,6 +1,6 @@
 import React from "react";
 
-import Modal from "./Components/Modal/Modal";
+//import Modal from "./Components/Modal/Modal";
 
 import MainPage from "./Components/MainPage/IndexPage";
 import FooterComponent from "./Components/Footer/Footer";
@@ -8,7 +8,7 @@ import FooterComponent from "./Components/Footer/Footer";
 function App() {
   return (
     <React.Fragment>
-      <Modal />
+
       <MainPage />
 
       <FooterComponent />

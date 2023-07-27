@@ -10,9 +10,8 @@ const MainPage = () => {
     <div>
       <div className="navbar clear nav-top">
         <div className="row content">
-          <a href="#">
-            <img className="logo" src={Logo} alt="Logo" />
-          </a>
+          <img className="logo" src={Logo} alt="Logo" />
+
           <a
             className="right"
             style={{ textDecoration: "none" }}
@@ -33,7 +32,7 @@ const MainPage = () => {
         </div>
       </div>
 
-      <div className="container clear">
+      <div className="container clear" style={{ paddingBottom: "200px" }}>
         <div className="row wrapper">
           <div className="sidepanel">
             {JsonData[selectedLanguage].map((blog) => (
@@ -47,18 +46,19 @@ const MainPage = () => {
               </a>
             ))}
             <div className="divider left"></div>
-            <a className="title" href="#moreinfo">
+            <a className="title" href="#">
               More Info
             </a>
             <div className="space double"></div>
           </div>
 
           <div className="right-col">
+            <h1>  Hussain, the Martyr of Freedom and Humanity</h1>
             {JsonData[selectedLanguage].map((blog) => (
               <div key={blog.id}>
                 <h2 id={blog.id}>{blog.title}</h2>
                 <p>{blog.body.description}</p>
-                <ul>
+                <ul style={{ listStyleType: "none" }}>
                   {blog.body.bullet_points.map((point, index) => (
                     <li key={index}>{point}</li>
                   ))}

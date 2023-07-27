@@ -61,26 +61,46 @@ a:hover {
   margin: 15px 30px; /* Adjust the margins as needed */
 }
 
+/* Navbar styles */
+.navbar {
+  height: auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-bottom: 80px; /* Adjust the value as needed to create space for the footer */
+}
+
 .navbar a {
   color: #000000;
   text-decoration: none;
   margin-right: 20px; /* Adjust the spacing between navbar links */
   font-size: 16px;
+  float: right; /* Align the <a> elements to the left side */
 }
+
+/* Rest of the styles */
 
 /* Add media queries for responsive design */
 @media screen and (max-width: 768px) {
   /* For screens smaller than 768px, make the navbar responsive */
   .navbar {
     height: auto;
-    padding: 15px 0;
-    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    text-align: center; /* Center the <a> elements */
   }
 
   .navbar a {
-    margin-right: 0;
+    color: #000000;
+    text-decoration: none;
     margin-bottom: 10px;
     display: block;
+    font-size: 16px;
   }
 
   .logo {
@@ -109,8 +129,6 @@ a:hover {
   height: auto;
 }
 
-
-
 .row {
   max-width: 63rem;
   margin: auto;
@@ -127,13 +145,12 @@ a:hover {
 }
 .sidepanel {
   width: 200px;
-  margin-top: 120px;
+
   overflow-x: hidden;
   position: fixed;
   height: calc(100% - 120px); /* Adjust the height based on your needs */
   bottom: 0; /* Position the sidepanel at the bottom */
 }
-
 
 .sidepanel a.title {
   font-family: "Thick-Regular", serif;
@@ -186,7 +203,6 @@ a:hover {
 }
 
 .right-col {
-  margin-top: 100px;
   text-align: left;
   width: 100%;
   margin-left: 220px;
@@ -194,9 +210,7 @@ a:hover {
 
 .right-col h1 {
   font-family: "Thick-Bold", monospace;
-  font-size: 24px;
-  line-height: 28px;
-  margin-bottom: 24px;
+  font-size: 50px;
 }
 
 .right-col h2 {
@@ -210,13 +224,13 @@ a:hover {
   margin-block-end: 10px;
 }
 
-.right-col p  {
+.right-col p {
   font-family: "Thick-Medium", monospace;
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 36px;
 }
-.right-col  ul {
+.right-col ul {
   font-family: "Thick-Medium", monospace;
   font-size: 18px;
   line-height: 30px;
@@ -300,19 +314,29 @@ a:hover {
 }
 
 /* Break Points */
-
 /* Extra small-small devices (phones, 420px and down) */
 @media only screen and (max-width: 420px) {
   .logo {
-    width: 100px;
+    width: 80px;
   }
 
   .navbar {
     height: auto;
   }
+  .navbar a {
+    display: none; /* Hide the <a> tags */
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 5px;
+    color: #000000;
+  }
+  h1 {
+    font-size: 14px;
+  }
 
   h2 {
-    font-size: 24px;
+    font-size: 10px;
   }
 
   .links {
@@ -323,14 +347,24 @@ a:hover {
 /* Extra small devices (phones, 650px and down) */
 @media only screen and (max-width: 650px) {
   .logo {
-    width: 115px;
+    width: 100px;
     margin: -10px 0px;
   }
 
-  .navbar a {
+  .navbar {
+    background-color: #ffffff;
     padding-bottom: 5px;
-    margin-left: 40px;
-    margin-right: 0;
+    float: none;
+    text-align: center;
+    height: auto;
+    position: sticky;
+  }  .navbar a {
+    display: none; /* Hide the <a> tags */
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 5px;
+    color: #000000;
   }
 
   .resp-break {
@@ -351,6 +385,7 @@ a:hover {
     text-align: center;
     position: relative;
     height: auto;
+    background-color: #f0f0f0;
   }
 
   .sidepanel a.title,
@@ -371,14 +406,54 @@ a:hover {
 }
 
 /* Small devices (portrait tablets and large phones, 650px and up) */
+@media only screen and (min-width: 450px) {
+  .logo {
+    margin: -10px 0px;
+  }
+  .navbar {
+    background-color: #ffffff;
+    padding: 5px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+  }
+
+  .navbar a {
+    display: none; /* Hide the <a> tags */
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 5px;
+    color: #000000;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 650px and up) */
 @media only screen and (min-width: 650px) {
   .logo {
     margin: -10px 0px;
   }
-
-  .right a {
-    float: right;
+  .navbar {
+    background-color: #ffffff;
     padding-bottom: 5px;
+    float: none;
+    text-align: center;
+    height: auto;
+    position: sticky;
+  }
+  .navbar a {
+    padding-bottom: 5px;
+    float: none;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 12px;
   }
 }
 
@@ -392,8 +467,69 @@ a:hover {
   .logo {
     margin: -10px 0px;
   }
+
+  .navbar {
+    background-color: #ffffff;
+    padding-bottom: 5px;
+    float: none;
+    text-align: center;
+    height: auto;
+    position: sticky;
+  }
+  .navbar a {
+    float: right;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .navbar {
+    background-color: #ffffff;
+    padding-bottom: 5px;
+    float: none;
+    text-align: center;
+    height: auto;
+    position: sticky;
+  }
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
 }
+
+/* Additional styles for .navbar */
+.navbar {
+  height: auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-bottom: 80px;
+  background-color: #ffffff;
+}
+
+.navbar a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 16px;
+  float: right;
+}
+
+
+
+/* Add your other existing styles here */
+/* Your other styles for navbar, footer, etc. */

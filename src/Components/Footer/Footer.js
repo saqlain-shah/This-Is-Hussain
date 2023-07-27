@@ -3,17 +3,18 @@ import "./Footer.css";
 import Logo from "../images/rinor.png";
 const FooterComponent = () => {
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="footer-info">
-          <p>&copy; {new Date().getFullYear()} RINOR. All rights reserved.</p>
-          <p>Address:RINOR, Jamia Masjid Rd, Near Doctor Hospital Skardu</p>
-          <p>Email: info@rinor.com</p>
-          <p>Phone: (058154)57424</p>
-          <p>Mobile: 0340-0596665</p>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <p class="copyright-text">Developed by:{" "}   
+         <a style={{color:" #bbb"}} href="#">Saqlain Shah</a>.
+            </p>
+          </div>
+          </div>
         </div>
-      </div>
-    </footer>
+     
+</footer>
   );
 };
 
